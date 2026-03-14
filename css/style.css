@@ -310,7 +310,7 @@
     }
 
     body {
-      padding-top: 250px;
+      padding-top: 200px;
     }
 
     .how-we-work {
@@ -855,7 +855,7 @@
   /* Адаптивность */
   @media (max-width: 700px) {
     body {
-      padding-top: 250px;
+      padding-top: 200px;
     }
 
     .top-bar__inner {
