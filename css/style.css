@@ -531,6 +531,7 @@
     font-size: 14px;
     line-height: 1.5;
     color: #444444;
+    min-width: 0;
   }
 
   .how-step__num {
@@ -581,8 +582,8 @@
 
   @media (max-width: 700px) {
     .how-we-work__grid {
-      grid-template-columns: repeat(2, minmax(200px, 1fr));
-      row-gap: 26px;
+      grid-template-columns: 1fr;
+      row-gap: 22px;
     }
   }
 
@@ -997,6 +998,7 @@
     font-size: 14px;
     line-height: 1.35;
     color: #444444;
+    min-width: 0;
   }
 
 
@@ -1018,8 +1020,8 @@
 
   @media (max-width: 700px) {
     .equipment__list {
-      grid-template-columns: repeat(2, minmax(220px, 1fr));
-      column-gap: 40px;
+      grid-template-columns: 1fr;
+      row-gap: 14px;
     }
 
     .equipment__item--center {
@@ -1086,6 +1088,7 @@
     justify-items: center;
     gap: 10px;
     padding: 6px 6px 10px;
+    min-width: 0;
   }
 
   .service-card__icon {
@@ -1173,7 +1176,7 @@
 
   @media (max-width: 900px) {
     .popular-services__grid {
-      grid-template-columns: repeat(3, minmax(140px, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
@@ -1188,7 +1191,7 @@
     }
 
     .popular-services__grid {
-      grid-template-columns: repeat(2, minmax(140px, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
