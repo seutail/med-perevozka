@@ -310,7 +310,11 @@
     }
 
     body {
-      padding-top: 260px;
+      padding-top: 320px;
+    }
+
+    .how-we-work {
+      padding-top: 40px;
     }
 
     .top-bar__inner {
@@ -850,6 +854,10 @@
   
   /* Адаптивность */
   @media (max-width: 700px) {
+    body {
+      padding-top: 300px;
+    }
+
     .top-bar__inner {
       grid-template-columns: 1fr;
       justify-items: start;
