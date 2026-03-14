@@ -310,7 +310,7 @@
     }
 
     body {
-      padding-top: 140px;
+      padding-top: 200px;
     }
 
     .top-bar__inner {
@@ -322,8 +322,8 @@
     }
 
     .logo-block__img {
-      width: 64px;
-      height: 64px;
+      width: 48px;
+      height: 48px;
     }
 
     .logo-block__title {
@@ -680,8 +680,8 @@
   }
 
   .logo-block__img {
-    width: clamp(74px, 7vw, 110px);
-    height: clamp(74px, 7vw, 110px);
+    width: clamp(52px, 5vw, 80px);
+    height: clamp(52px, 5vw, 80px);
     object-fit: contain;
     display: block;
     flex: 0 0 auto;
@@ -872,8 +872,8 @@
     }
   
     .logo-block__img {
-      width: 78px;
-      height: 78px;
+      width: 56px;
+      height: 56px;
     }
   
     .logo-block__title {
