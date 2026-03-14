@@ -12,12 +12,44 @@
   *::after {
     box-sizing: border-box;
   }
-  
+
+  html {
+    overflow-x: hidden;
+  }
+
   body {
     margin: 0;
     font-family: var(--font-main);
     color: var(--text-dark);
     font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Картинки в слайдере — не сжимать, заполнять фон */
+  .hero-slide__bg {
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Ссылки без синего: цвет как у текста/бургунди */
+  a,
+  a:visited,
+  [href] {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover,
+  [href]:hover {
+    text-decoration: underline;
   }
 
   .hero-slider {
@@ -142,7 +174,7 @@
   }
 
   .hero-slide__hint {
-    color: #6aaec0;
+    color: var(--burgundy);
     font-size: 14px;
   }
 
@@ -215,10 +247,21 @@
     }
   }
 
-  /* Телефон: как на эталоне — один столбец, герой на всю ширину */
+  /* Телефон: как на эталоне — один столбец, герой на всю ширину, без горизонтальной прокрутки */
   @media (max-width: 600px) {
+    .hero-slider__inner,
+    .how-we-work__inner,
+    .equipment__inner,
+    .popular-services__inner,
+    .faq__inner,
+    .site-footer__inner {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
     .hero-slider__inner {
       padding: 12px 12px 0;
+      overflow-x: hidden;
     }
 
     .hero-slider__slides {
@@ -231,7 +274,7 @@
       max-width: none;
       width: 100%;
       padding: 16px 14px;
-      background: rgba(255, 255, 255, 0.97);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 60%, rgba(255, 255, 255, 0.5) 100%);
       box-sizing: border-box;
     }
 
@@ -258,10 +301,13 @@
       background-size: 18px 18px;
     }
 
-    /* Шапка компактнее */
+    /* Шапка на всю ширину, без зазора справа */
     .top-bar__inner {
+      width: 100%;
+      max-width: 100%;
       padding: 10px 12px;
       gap: 10px;
+      box-sizing: border-box;
     }
 
     .logo-block__img {
@@ -564,8 +610,9 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
   }
-  
+
   .top-bar__inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -574,6 +621,8 @@
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 18px;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   /* Левая часть */
@@ -1289,12 +1338,14 @@
     font-weight: 600;
   }
 
-  .site-footer__phones a {
+  .site-footer__phones a,
+  .site-footer__phones b[href] {
     color: #ffffff;
     text-decoration: none;
   }
 
-  .site-footer__phones a:hover {
+  .site-footer__phones a:hover,
+  .site-footer__phones b[href]:hover {
     text-decoration: underline;
   }
 
