@@ -394,7 +394,7 @@
 
     /* Оборудование — один столбец */
     .equipment {
-      padding: 32px 0 40px;
+      padding-top: 32px;
     }
 
     .equipment__inner {
@@ -1556,10 +1556,19 @@
     justify-items: center;
   }
 
+  @media (max-width: 700px) {
+    .included-grid {
+      grid-template-columns: 1fr;
+      gap: 22px;
+      max-width: 100%;
+    }
+  }
+
   .included-card {
     margin: 0;
     text-align: center;
     color: var(--text-dark);
+    min-width: 0;
   }
 
   .included-card__img {
@@ -1604,8 +1613,29 @@
     align-items: stretch;
   }
 
+  @media (max-width: 900px) {
+    .benefits-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+      max-width: 100%;
+    }
+
+    .spine-equipment {
+      grid-template-columns: 1fr;
+      max-width: 100%;
+    }
+  }
+
   .benefit-card {
     border: 1px solid rgba(127, 179, 198, 0.7);
+    min-width: 0;
     border-radius: 6px;
     padding: 16px 14px 18px;
     text-align: center;
@@ -1719,22 +1749,45 @@
   }
 
   @media (max-width: 500px) {
-    .included-grid {
-      grid-template-columns: 1fr;
-      gap: 22px;
-    }
-
     .service-page__subtitle {
       font-size: 28px;
     }
 
-    .benefits-grid {
-      grid-template-columns: repeat(2, minmax(220px, 1fr));
-      justify-items: stretch;
+    .spine-equipment {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .service-page__inner {
+      padding-left: 12px;
+      padding-right: 12px;
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
-    .spine-equipment {
-      grid-template-columns: repeat(2, minmax(220px, 1fr));
+    .service-page__title {
+      font-size: 26px;
+    }
+
+    .service-page__subtitle {
+      font-size: 24px;
+    }
+
+    .service-page__subtitle--small {
+      font-size: 22px;
+    }
+
+    .included-card__caption {
+      font-size: 14px;
+    }
+
+    .included-note {
+      font-size: 15px;
+    }
+
+    .benefit-card__text {
+      font-size: 14px;
     }
   }
 
@@ -1744,27 +1797,23 @@
     }
 
     .service-page__title {
-      font-size: 26px;
-      text-align: left;
-    }
-
-    .service-page__subtitle {
       font-size: 24px;
       text-align: left;
     }
 
-    .service-page__subtitle--small {
+    .service-page__subtitle {
       font-size: 22px;
+      text-align: left;
+    }
+
+    .service-page__subtitle--small {
+      font-size: 20px;
       margin-top: 34px;
     }
 
-    .benefits-grid {
-      grid-template-columns: 1fr;
-    }
-
     .included-card__img {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
     }
 
     .spine-equipment {
@@ -1879,12 +1928,41 @@
 
   @media (max-width: 700px) {
     .medtaxi-features {
-      grid-template-columns: repeat(2, minmax(220px, 1fr));
-      justify-items: stretch;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 100%;
+      justify-items: start;
     }
 
     .medtaxi-feature {
-      max-width: none;
+      max-width: 100%;
+      min-width: 0;
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 12px;
+      align-items: start;
+      text-align: left;
+    }
+
+    .medtaxi-feature__icon {
+      margin: 0;
+    }
+
+    .medtaxi-feature__text {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .medtaxi-page__inner {
+      padding-left: 12px;
+      padding-right: 12px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .medtaxi-title {
+      font-size: 26px;
     }
   }
 
@@ -1894,26 +1972,12 @@
     }
 
     .medtaxi-title {
-      font-size: 28px;
+      font-size: 24px;
       text-align: left;
     }
 
-    .medtaxi-features {
-      grid-template-columns: 1fr;
-      justify-items: start;
-    }
-
-    .medtaxi-feature {
-      text-align: left;
-      display: grid;
-      grid-template-columns: 54px 1fr;
-      gap: 12px;
-      align-items: start;
-      max-width: 100%;
-    }
-
-    .medtaxi-feature__icon {
-      margin: 0;
+    .medtaxi-feature__text {
+      font-size: 14px;
     }
   }
 
