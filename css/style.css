@@ -215,6 +215,223 @@
     }
   }
 
+  /* Телефон: как на эталоне — один столбец, герой на всю ширину */
+  @media (max-width: 600px) {
+    .hero-slider__inner {
+      padding: 12px 12px 0;
+    }
+
+    .hero-slider__slides {
+      height: 240px;
+      border-radius: 4px;
+    }
+
+    .hero-slide__panel,
+    .hero-slide__panel--center {
+      max-width: none;
+      width: 100%;
+      padding: 16px 14px;
+      background: rgba(255, 255, 255, 0.97);
+      box-sizing: border-box;
+    }
+
+    .hero-slide__title {
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .hero-slide__list {
+      font-size: 15px;
+    }
+
+    .hero-slider__nav--prev {
+      left: 6px;
+      width: 38px;
+      height: 38px;
+      background-size: 18px 18px;
+    }
+
+    .hero-slider__nav--next {
+      right: 6px;
+      width: 38px;
+      height: 38px;
+      background-size: 18px 18px;
+    }
+
+    /* Шапка компактнее */
+    .top-bar__inner {
+      padding: 10px 12px;
+      gap: 10px;
+    }
+
+    .logo-block__img {
+      width: 64px;
+      height: 64px;
+    }
+
+    .logo-block__title {
+      font-size: 18px;
+    }
+
+    .logo-block__subtitle {
+      font-size: 11px;
+    }
+
+    .badge {
+      padding: 6px 14px;
+      font-size: 12px;
+    }
+
+    .hotline__phone {
+      font-size: 16px;
+    }
+
+    .hotline__note {
+      font-size: 11px;
+    }
+
+    /* Как мы работаем — один столбец, полная ширина */
+    .how-we-work {
+      padding: 24px 0 32px;
+    }
+
+    .how-we-work__inner {
+      padding: 0 12px;
+    }
+
+    .how-we-work__title {
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+
+    .how-we-work__grid {
+      grid-template-columns: 1fr;
+      row-gap: 18px;
+    }
+
+    .how-step {
+      font-size: 15px;
+    }
+
+    .how-step__p {
+      font-size: 18px;
+    }
+
+    .how-step__p_info {
+      font-size: 15px;
+    }
+
+    /* О нас: картинка сверху, текст на всю ширину */
+    .about-block {
+      padding: 24px 0;
+    }
+
+    .about-block__inner {
+      flex-direction: column;
+      padding: 0 12px;
+      gap: 0;
+    }
+
+    .about-block__image {
+      flex: none;
+      width: 100%;
+    }
+
+    .about-block__image img {
+      border-radius: 4px 4px 0 0;
+    }
+
+    .about-block__text {
+      padding: 18px 0 0;
+      font-size: 16px;
+    }
+
+    /* Оборудование — один столбец */
+    .equipment {
+      padding: 32px 0 40px;
+    }
+
+    .equipment__inner {
+      padding: 0 12px;
+    }
+
+    .equipment__title {
+      font-size: 26px;
+    }
+
+    .equipment__lead {
+      font-size: 15px;
+      text-align: left;
+    }
+
+    .equipment__list {
+      grid-template-columns: 1fr;
+      row-gap: 14px;
+      margin-top: 20px;
+    }
+
+    .equipment__item {
+      font-size: 15px;
+    }
+
+    /* Популярные услуги */
+    .popular-services__inner {
+      padding: 0 12px;
+    }
+
+    .popular-services__title {
+      font-size: 26px;
+    }
+
+    .popular-services__lead {
+      font-size: 15px;
+      text-align: left;
+    }
+
+    .popular-services__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .service-card__text {
+      font-size: 14px;
+    }
+
+    /* FAQ */
+    .faq__inner {
+      padding: 0 12px;
+    }
+
+    .faq__title {
+      font-size: 26px;
+    }
+
+    .faq-item__q {
+      font-size: 15px;
+    }
+
+    .faq-item__a {
+      font-size: 15px;
+    }
+
+    /* Подвал */
+    .site-footer__inner {
+      padding: 0 12px;
+      grid-template-columns: 1fr;
+      justify-items: start;
+      gap: 16px;
+    }
+
+    .site-footer__phones {
+      justify-self: start;
+    }
+
+    .site-footer__right {
+      justify-self: start;
+    }
+  }
+
   @media (max-width: 400px) {
     body {
       font-size: 18px;
@@ -685,16 +902,6 @@
     margin-bottom: 0;
   }
   
-  @media (max-width: 600px) {
-    .about-block__inner {
-      flex-direction: column;
-    }
-  
-    .about-block__image {
-      flex: 0 0 auto;
-    }
-  }
-
   .equipment {
     background: #ffffff;
     padding: 55px 0 65px;
