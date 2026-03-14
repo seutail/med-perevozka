@@ -17,6 +17,7 @@
     margin: 0;
     font-family: var(--font-main);
     color: var(--text-dark);
+    font-size: 16px;
   }
 
   .hero-slider {
@@ -215,19 +216,129 @@
   }
 
   @media (max-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+
     .hero-slider__slides {
       height: 260px;
     }
 
     .hero-slide__title {
-      font-size: 22px;
+      font-size: 24px;
     }
 
     .hero-slide__big {
-      font-size: 22px;
+      font-size: 24px;
     }
   }
-  
+
+  /* Как мы работаем */
+  .how-we-work {
+    background: #ffffff;
+    padding: 40px 0 50px;
+  }
+
+  .how-we-work__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .how-we-work__title {
+    margin: 0;
+    text-align: left;
+    font-size: 34px;
+    line-height: 1.15;
+    color: var(--burgundy);
+    font-weight: 400;
+    margin-bottom: 26px;
+  }
+
+  .how-we-work__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+    column-gap: 40px;
+  }
+
+  .how-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444444;
+  }
+
+  .how-step__num {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 2px solid var(--burgundy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--burgundy);
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .how-step__content p {
+    margin: 0;
+  }
+
+  .how-step__p {
+    font-size: 20px;
+    color:var(--burgundy);
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  .how-step__p_info {
+    font-size: 15px;
+  }
+
+  .how-step__button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: var(--burgundy);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 3px;
+  }
+
+  .how-step__button:hover {
+    background: #a51b1f;
+  }
+
+  @media (max-width: 900px) {
+    .how-we-work__grid {
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      row-gap: 26px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .how-we-work {
+      padding: 28px 0 36px;
+    }
+
+    .how-we-work__title {
+      font-size: 30px;
+      margin-bottom: 22px;
+    }
+
+    .how-we-work__grid {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+  }
+
   /* Шапка */
   .top-bar {
     background: #ffffff;
@@ -666,7 +777,7 @@
     }
 
     .equipment__title {
-      font-size: 28px;
+      font-size: 30px;
     }
 
     .equipment__list {
@@ -817,7 +928,7 @@
 
     .popular-services__title,
     .prices__title {
-      font-size: 28px;
+      font-size: 30px;
     }
 
     .popular-services__grid {
@@ -905,16 +1016,17 @@
 
   @media (max-width: 600px) {
     .faq__title {
-      font-size: 28px;
+      font-size: 30px;
     }
 
     .faq-item__q {
       padding: 16px 46px 16px 16px;
-      font-size: 14px;
+      font-size: 15px;
     }
 
     .faq-item__a {
       padding: 14px 16px;
+      font-size: 15px;
     }
   }
 
@@ -1097,11 +1209,15 @@
     }
 
     .article-page__title {
-      font-size: 28px;
+      font-size: 30px;
+    }
+
+    .article-page__content {
+      font-size: 15px;
     }
 
     .article-page__content h2 {
-      font-size: 22px;
+      font-size: 24px;
     }
   }
 
@@ -1517,7 +1633,7 @@
     }
 
     .medtaxi-title {
-      font-size: 26px;
+      font-size: 28px;
       text-align: left;
     }
 
