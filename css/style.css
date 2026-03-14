@@ -301,7 +301,18 @@
       background-size: 18px 18px;
     }
 
-    /* Шапка на всю ширину, без зазора справа */
+    /* Закрепляем шапку на телефонах */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    body {
+      padding-top: 140px;
+    }
+
     .top-bar__inner {
       width: 100%;
       max-width: 100%;
@@ -326,6 +337,19 @@
     .badge {
       padding: 6px 14px;
       font-size: 12px;
+    }
+
+    .top-bar__center {
+      gap: 10px;
+    }
+
+    .top-bar__messenger {
+      width: 36px;
+      height: 36px;
+    }
+
+    .top-bar__messengers {
+      gap: 8px;
     }
 
     .hotline__phone {
@@ -608,10 +632,16 @@
     background: #ffffff;
     border-bottom: 1px solid #e5e5e5;
     font-size: 14px;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     width: 100%;
+  }
+
+  body {
+    padding-top: 96px;
   }
 
   .top-bar__inner {
@@ -704,9 +734,41 @@
     text-decoration: underline;
   }
   
-  /* Центр */
+  /* Центр: плашка + иконки MAX и Telegram */
   .top-bar__center {
     justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .top-bar__messengers {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .top-bar__messenger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: opacity 0.2s;
+  }
+
+  .top-bar__messenger:hover {
+    opacity: 0.85;
+  }
+
+  .top-bar__messenger img,
+  .top-bar__messenger .max-logo,
+  .top-bar__messenger .telegram-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
   }
   
   .badge {
