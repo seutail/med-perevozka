@@ -621,7 +621,7 @@
     grid-template-columns: repeat(3, minmax(220px, 1fr));
     column-gap: 55px;
     row-gap: 22px;
-    align-items: start;
+    align-items:center;
   }
 
   .equipment__item {
@@ -631,6 +631,7 @@
     line-height: 1.35;
     color: #444444;
   }
+
 
   .equipment__item::before {
     content: "";
@@ -1263,7 +1264,7 @@
   }
 
   .spine-section {
-    margin-top: 24px;
+    margin: 0 auto;
   }
 
   .spine-list {
